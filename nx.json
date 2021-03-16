@@ -12,12 +12,21 @@
   "tasksRunnerOptions": {
     "default": {
       "runner": "@nrwl/workspace/tasks-runners/default",
-      "options": { "cacheableOperations": ["build", "lint", "test", "e2e"] }
+      "options": {
+        "cacheableOperations": [
+          "build",
+          "lint",
+          "test",
+          "e2e",
+          "build-storybook"
+        ]
+      }
     }
   },
   "projects": {
     "nx-demo": { "tags": [] },
     "nx-demo-e2e": { "tags": [], "implicitDependencies": ["nx-demo"] },
-    "ui-calendar": { "tags": [] }
+    "ui-calendar": { "tags": [] },
+    "ui-calendar-e2e": { "tags": [], "implicitDependencies": ["ui-calendar"] }
   }
 }
