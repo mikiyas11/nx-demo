@@ -1,1 +1,20 @@
-<p>ui-calendar-months works!</p>
+<div class="month-header">
+  <button class="month-header__stepper month-header__stepper--previous"
+          *ngIf="showMonthStepper"
+          (click)="stepMonth(-1)"
+          type="button"
+          aria-label="Previous month"
+          style="color: #fff;"
+  >◀</button>
+  <time class="month-header__caption"
+        [dateTime]="month | date:'yyyy-MM'"
+        cdkAriaLive="polite"
+  >{{month | monthPipe:locale:monthAndYearFormat}}</time>
+  <button class="month-header__stepper month-header__stepper--next"
+          *ngIf="showMonthStepper"
+          (click)="stepMonth(1)"
+          type="button"
+          aria-label="Next month"
+          style="color: #fff;"
+  >▶</button>
+</div>

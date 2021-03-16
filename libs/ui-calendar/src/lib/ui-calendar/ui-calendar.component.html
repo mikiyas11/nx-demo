@@ -1,1 +1,27 @@
-<p>ui-calendar works!</p>
+
+<input #input type="text" (click)="onInputClick()" [(ngModel)]="formattedValue" >
+
+<div #container *ngIf="showCalendar" class="calendar"
+[ngClass]="'calendar--first-day-of-week-' + (firstDayOfWeek | lowercase)"
+[class.calendar--disabled]="disabled" style="position: absolute;">
+
+    <ng-container *ngFor="let month of months; trackBy: trackByMillisecondsChange; let i =index">
+      <nx-demo-ui-calendar-months [month]="month"
+      [activeMonth]="activeMonth"
+      (activeMonthChange)="onActiveMonthChange($event)"
+      [monthAndYearFormat]="monthAndYearFormat"
+      [showMonthStepper]="showMonthStepper"
+      [locale]="locale"
+      ></nx-demo-ui-calendar-months>
+      <nx-demo-ui-calendar-days *ngIf="i===0"></nx-demo-ui-calendar-days>
+      <nx-demo-ui-calendar-month [month]="month"
+               [selectedDate]="value"
+               (selectedDateChange)="onSelect($event)"
+               [min]="min"
+               [activeDate]="activeDate"
+               (activeDateChange)="activeDateChange($event)"
+               [locale]="locale"
+    ></nx-demo-ui-calendar-month>
+
+    </ng-container>
+</div>
