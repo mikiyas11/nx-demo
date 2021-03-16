@@ -145,6 +145,31 @@
           }
         }
       }
+    },
+    "ui-calendar": {
+      "projectType": "library",
+      "root": "libs/ui-calendar",
+      "sourceRoot": "libs/ui-calendar/src",
+      "prefix": "nx-demo",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/ui-calendar/src/**/*.ts",
+              "libs/ui-calendar/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/ui-calendar"],
+          "options": {
+            "jestConfig": "libs/ui-calendar/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   }
 }
