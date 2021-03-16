@@ -124,6 +124,11 @@ export class UiCalendarMonthComponent implements AfterViewInit, OnChanges {
     */
    private readonly dateSelector = 'time.month__date';
 
+   /**
+    *Creates an instance of UiCalendarMonthComponent.
+    * @param {ChangeDetectorRef} changeDetectorRef
+    * @memberof UiCalendarMonthComponent
+    */
    constructor(public changeDetectorRef: ChangeDetectorRef) {}
 
    /**
