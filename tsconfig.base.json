@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@engineering11/ui-calendar": ["libs/ui-calendar/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
