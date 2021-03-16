@@ -15,7 +15,6 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@nx-demo/ui-calendar": ["libs/ui-calendar/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

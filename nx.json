@@ -25,8 +25,6 @@
   },
   "projects": {
     "nx-demo": { "tags": [] },
-    "nx-demo-e2e": { "tags": [], "implicitDependencies": ["nx-demo"] },
-    "ui-calendar": { "tags": [] },
-    "ui-calendar-e2e": { "tags": [], "implicitDependencies": ["ui-calendar"] }
+    "nx-demo-e2e": { "tags": [], "implicitDependencies": ["nx-demo"] }
   }
 }
