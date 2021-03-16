@@ -1,7 +1,8 @@
 {
   "version": 1,
   "cli": {
-    "defaultCollection": "@nrwl/angular"
+    "defaultCollection": "@nrwl/angular",
+    "analytics": "8dea41d9-1324-4a92-8697-358269caba5e"
   },
   "defaultProject": "nx-demo",
   "schematics": {
@@ -51,7 +52,9 @@
               "apps/nx-demo/src/favicon.ico",
               "apps/nx-demo/src/assets"
             ],
-            "styles": ["apps/nx-demo/src/styles.scss"],
+            "styles": [
+              "apps/nx-demo/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -112,7 +115,9 @@
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/nx-demo"],
+          "outputs": [
+            "coverage/apps/nx-demo"
+          ],
           "options": {
             "jestConfig": "apps/nx-demo/jest.config.js",
             "passWithNoTests": true
@@ -141,7 +146,9 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/nx-demo-e2e/**/*.{js,ts}"]
+            "lintFilePatterns": [
+              "apps/nx-demo-e2e/**/*.{js,ts}"
+            ]
           }
         }
       }
@@ -163,7 +170,9 @@
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/ui-calendar"],
+          "outputs": [
+            "coverage/libs/ui-calendar"
+          ],
           "options": {
             "jestConfig": "libs/ui-calendar/jest.config.js",
             "passWithNoTests": true
@@ -186,7 +195,9 @@
         },
         "build-storybook": {
           "builder": "@nrwl/storybook:build",
-          "outputs": ["{options.outputPath}"],
+          "outputs": [
+            "{options.outputPath}"
+          ],
           "options": {
             "uiFramework": "@storybook/angular",
             "outputPath": "dist/storybook/ui-calendar",
@@ -223,7 +234,9 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/ui-calendar-e2e/**/*.{js,ts}"]
+            "lintFilePatterns": [
+              "apps/ui-calendar-e2e/**/*.{js,ts}"
+            ]
           }
         }
       }
