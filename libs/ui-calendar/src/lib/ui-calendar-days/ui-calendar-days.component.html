@@ -1,1 +1,7 @@
-<p>ui-calendar-days works!</p>
+<div class="days-of-week">
+  <abbr class="days-of-week__day"
+        *ngFor="let dayOfWeek of days; index as index"
+        [title]="dayOfWeek"
+        [attr.aria-label]="dayOfWeek"
+  >{{narrowDays[index]}}</abbr>
+</div>
